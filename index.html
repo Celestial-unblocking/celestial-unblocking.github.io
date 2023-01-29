@@ -29,22 +29,12 @@
     <div class="container">
         <img src="/img/logo.png" width="250px" height="250px">
         <div>
-            <script>
-                function go() {
-                    var input = document.getElementById('url-target');
-                    if (input.value) {
-                        window.location.href = '/main/' + input.value;
-                    } else {
-                        alert('Please provide a link. It requires https://.');
-                    }
-                }
-            </script>
             <span class="w3-xlarge">Celestia Volume 1.0</span>
-            <div>
-                <input class="w3-xlarge round" type='text' placeholder='Search the web...' id='url-target'
+            <form>
+<input class="w3-xlarge round" type='text' placeholder='Search the web...' id='url-target'
                     onkeydown='if(event.key==="Enter") go()' />
                 <button onclick='go()' class="w3-xlarge">GO!</button>
-            </div>
+            </form>
             <br>
             <br>
             <p class="w3-medium">Made By @Callmekira, @Genarcy, and @aereal98. Also 
@@ -52,5 +42,8 @@
         
 
 </body>
+  <script src="uv/uv.bundle.js"></script>
+  <script src="uv/uv.config.js"></script>
+	<script src="index.js"></script>
     </html>
 
