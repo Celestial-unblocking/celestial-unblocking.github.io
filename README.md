@@ -4,7 +4,7 @@ Welcome to Celestia a small project made by me Seth, My lead developer and frien
 
 
 # Self Hosting
-Currently we do not give out free hosting you need to subscribe to our patreon or buy a voucher.
+Currently we do not give out free hosting. You need to subscribe to our patreon or buy a voucher.
 
 
 
@@ -14,5 +14,7 @@ https://discord.gg/KSSMRFFb4E
 
 Our offical github page!
 https://github.com/Celestial-unblocking
+
+
 
 
