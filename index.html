@@ -13,10 +13,16 @@
     <title>Celestia Proxy!</title>
 </head>
 <style>
+
     body {
       background-image:url("https://celestialearning.netlify.app/img/space.png");
       background-repeat: no-repeat;
     }
+
+    .round{
+        border-radius: 10px;
+    }
+    
     </style>
 <body>
 
@@ -35,7 +41,7 @@
             </script>
             <span class="w3-xlarge">Celestia v.1 </span>
             <div>
-                <input class="w3-xlarge" type='text' placeholder='https://www.google.com' id='url-target'
+                <input class="w3-xlarge round" type='text' placeholder='Search the web...' id='url-target'
                     onkeydown='if(event.key==="Enter") go()' />
                 <button onclick='go()' class="w3-xlarge">Unblock!</button>
             </div>
