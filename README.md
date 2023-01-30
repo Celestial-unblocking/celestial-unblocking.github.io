@@ -5,6 +5,8 @@ Welcome to Celestia a small project made by me Seth, My lead developer and frien
 
 # Self Hosting
 Currently we do not give out free hosting. You need to subscribe to our patreon or buy a voucher.
+Run On Replit
+https://replit.com/github/Celestial-unblocking/Celestia
 
 
 
