@@ -14,9 +14,11 @@
   width: 250px;
   padding: 50px;
   margin: 20px;
+  border-radius: 20px;
       }
       .button{
         background-color: rgb(150, 150, 238);
+        
         color: black;
         float: left;
         text-decoration: none;
@@ -28,10 +30,26 @@
         background-color: rgb(168, 168, 238);
         color:black;
     }
+    .hover:hover, .hover:focus, .hover:active {
+  -webkit-transform: translateY(-8px);
+  transform: translateY(-8px);
+}
+.hover {
+ 
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
       
       </style>
     <body>
-        <div class="card">
+        <div class="card hover">
             <a class="button" href="/pages/games/1/">1 game</a>
 
 
