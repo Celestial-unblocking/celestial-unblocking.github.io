@@ -1,72 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Forest basins</title>
-<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-<link rel="stylesheet" type="text/css" href="./Qgis2threejs.css">
-</head>
+<html><head>
+  <style>body,html,iframe{margin:0;padding:0;height:100%;width:100%;overflow:hidden}.forceIosScrolling{overflow:scroll;-webkit-overflow-scrolling:touch}</style>
+<script src="https://apis.google.com/_/scs/abc-static/_/js/k=gapi.lb.en.AMZ27oQJoUI.O/m=gapi_rpc/rt=j/sv=1/d=1/ed=1/rs=AHpOoo9dsXwz2g0gTMdQFEKa7ZoVvtQf4g/cb=gapi.loaded_0?le=scs" async=""></script><script src="https://apis.google.com/js/api.js?checkCookie=1" gapi_processed="true"></script></head>
+
 <body>
-<div id="webgl"></div>
+<iframe id="innerFrame" name="innerFrame" sandbox="allow-scripts allow-popups allow-forms allow-same-origin allow-popups-to-escape-sandbox allow-downloads" frameborder="0" allowfullscreen="" src="https://www.mathplayground.com/2048/index.html" style="overflow: auto;">
+</iframe>
 
-<div style="position:absolute;top:0px;left:0px;"><img src="legend.png"></div>
+<script>function loadGapi(){var loaderScript=document.createElement('script');loaderScript.setAttribute('src','https://apis.google.com/js/api.js?checkCookie=1');loaderScript.onload=function(){this.onload=function(){};loadGapiClient();};loaderScript.onreadystatechange=function(){if(this.readyState==='complete'){this.onload();}};(document.head||document.body||document.documentElement).appendChild(loaderScript);}function updateInnerFrame(url,enableInteraction,forceIosScrolling){var urlEl=document.createElement('a');urlEl.setAttribute('href',url);if(urlEl.protocol!="https:"&&urlEl.protocol!="http:"){return;}var iframe=document.getElementById('innerFrame');iframe.src=url;iframe.onload=function(){gapi.rpc.call('..','innerFrameLoaded');};if(enableInteraction){if(forceIosScrolling){var iframeParent=iframe.parentElement;iframeParent.classList.add('forceIosScrolling');}else{iframe.style.overflow='auto';}}else{iframe.style.pointerEvents='none';}}function updateInnerIframeCode(userCode,enableInteraction,forceIosScrolling){gapi.rpc.setup('innerFrame');gapi.rpc.call('innerFrame','updateUserHtmlFrame',undefined,userCode,enableInteraction,forceIosScrolling);}function onPostMessage(ev){if(ev.data['magic']!='SHIC'){return;}var type=ev.data['type'];switch(type){case'resize':var height=ev.data['height'];gapi.rpc.call('..','resize',undefined,height);}}function onGapiInitialized(){gapi.rpc.call('..','gapiInitialized');gapi.rpc.register('updateInnerFrame',updateInnerFrame);gapi.rpc.register('updateInnerIframeCode',updateInnerIframeCode);window.addEventListener('message',onPostMessage);}function loadGapiClient(){gapi.load('gapi.rpc',onGapiInitialized);}if(document.readyState=='complete'){loadGapi();}else{self.addEventListener('load',loadGapi);}</script>
 
-<!-- popup -->
-<div id="popup" style="display:none;">
-<div id="closebtn">&times;</div>
-<div id="popupbar"></div>
-<div id="popupbody">
- <div id="popupcontent"></div>
- <div id="pageinfo">
-  <h1>Current View URL</h1>
-  <div><input id="urlbox" type="text"></div>
 
-  <h1>Usage</h1>
-  <div id="usage"></div>
-
-  <h1>About</h1>
-  <div id="about">This page was made with <a href="http://www.qgis.org/" target="_blank">QGIS</a> and <a href="https://github.com/minorua/Qgis2threejs" target="_blank">Qgis2threejs</a> plugin, 
-and uses the following library:
-  <ul>
-  <li>three.js <a href="http://threejs.org/" target="_blank">http://threejs.org/</a> <a href="./threejs/LICENSE" target="_blank" class="license">(LICENSE)</a></li>
-  <li>dat-gui <a href="https://code.google.com/p/dat-gui/" target="_blank">https://code.google.com/p/dat-gui/</a> <a href="./dat-gui/license.txt" target="_blank" class="license">(LICENSE)</a></li>
-  <li id="lib_proj4js" style="display: none;">Proj4js <a href="http://trac.osgeo.org/proj4js/" target="_blank">http://trac.osgeo.org/proj4js/</a> <a href="./proj4js/LICENSE.md" target="_blank" class="license">(LICENSE)</a></li>
-  </ul>
-  </div>
- </div>
-</div></div>
-
-<!-- footer -->
-<div id="footer"></div>
-
-<script src="./threejs/three.min.js"></script>
-<script src="./Qgis2threejs.js"></script>
-<script src="./threejs/OrbitControls.js"></script>
-<script>
-var option = Q3D.Options;
-
-</script>
-<script src="./slope.js"></script>
-<script>
-if (typeof proj4 !== "undefined") document.getElementById("lib_proj4js").style.display = "list-item";
-
-var container = document.getElementById("webgl");
-// initialize application
-var app = Q3D.application;
-app.init(container);
-
-// load the project
-app.loadProject(project);
-
-app.addEventListeners();
-app.start();
-
-</script>
-<script src="./dat-gui/dat.gui.min.js"></script>
-<script src="./dat-gui_panel.js"></script>
-<script>
-// initialize dat-gui panel
-Q3D.gui.init();
-</script>
-</body>
-</html>
+</body></html>
