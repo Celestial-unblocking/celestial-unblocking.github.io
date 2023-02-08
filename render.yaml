@@ -1,0 +1,6 @@
+
+  services:
+  - type: web
+    name: celestia
+    env: docker
+    plan: free
